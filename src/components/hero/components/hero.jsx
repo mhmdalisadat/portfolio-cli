@@ -2,7 +2,8 @@
 
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-import HeroImg from "./hero.svg";
+import mmd from "./hero.svg";
+import mahya from "./mahya.svg";
 import { useEffect } from "react";
 
 const HeroSection = () => {
@@ -48,7 +49,7 @@ const HeroSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="relative w-full h-full">
-            <Image src={HeroImg} alt="Person" objectFit="cover" />
+            <Image src={mahya} alt="Person" objectFit="cover" />
           </div>
         </motion.div>
 

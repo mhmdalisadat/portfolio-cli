@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       <HeroSection />
-      <Loader />
       <Dock className="fixed bottom-0 left-0 w-full" />
+      <Loader />
     </div>
   );
 }
