@@ -1,15 +1,20 @@
 import localFont from "next/font/local";
+import { Roboto } from "@next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Importing Roboto from Google Fonts
+const roboto = Roboto({
+  weight: ["400", "700"], // Include multiple weights if needed
+  subsets: ["latin"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+// Josefin Sans font via Google Fonts
+import { Josefin_Sans } from "@next/font/google"; // Use the official `@next/font/google` for optimization
+
+const josefinSans = Josefin_Sans({
+  weight: ["100", "300", "400", "700"], // Include the variable weights
+  subsets: ["latin"],
+  style: ["normal", "italic"], // Include styles if necessary
 });
 
 export const metadata = {
@@ -21,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.className} ${josefinSans.className} antialiased`}
       >
         {children}
       </body>

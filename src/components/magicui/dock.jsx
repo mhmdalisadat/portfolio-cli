@@ -1,97 +1,83 @@
-// "use client";;
-// import React, { useRef } from "react";
-// import { cva } from "class-variance-authority";
-// import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import React from "react";
+import { FloatingDock } from "../hero/components/ui/floatingDock";
+import {
+  IconBrandGithub,
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+  IconTerminal2,
+} from "@tabler/icons-react";
+import Image from "next/image";
 
-// import { cn } from "@/lib/utils";
+const Dock = () => {
+  const links = [
+    {
+      title: "Home",
+      icon: (
+        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
 
-// const DEFAULT_MAGNIFICATION = 60;
-// const DEFAULT_DISTANCE = 140;
+    {
+      title: "Products",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Components",
+      icon: (
+        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Aceternity UI",
+      icon: (
+        <Image
+          src="https://assets.aceternity.com/logo-dark.png"
+          width={20}
+          height={20}
+          alt="Aceternity Logo"
+        />
+      ),
+      href: "#",
+    },
+    {
+      title: "Changelog",
+      icon: (
+        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
 
-// const dockVariants = cva(
-//   "mx-auto w-max mt-8 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md"
-// );
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+  ];
+  return (
+    <div className="flex items-center justify-center h-[35rem] w-full">
+      <FloatingDock
+        // only for demo, remove for production
+        mobileClassName="translate-y-20"
+        items={links}
+      />
+    </div>
+  );
+};
 
-// const Dock = React.forwardRef((
-//   {
-//     className,
-//     children,
-//     magnification = DEFAULT_MAGNIFICATION,
-//     distance = DEFAULT_DISTANCE,
-//     direction = "bottom",
-//     ...props
-//   },
-//   ref,
-// ) => {
-//   const mouseX = useMotionValue(Infinity);
-
-//   const renderChildren = () => {
-//     return React.Children.map(children, (child) => {
-//       return React.cloneElement(child, {
-//         mouseX: mouseX,
-//         magnification: magnification,
-//         distance: distance,
-//       });
-//     });
-//   };
-
-//   return (
-//     (<motion.div
-//       ref={ref}
-//       onMouseMove={(e) => mouseX.set(e.pageX)}
-//       onMouseLeave={() => mouseX.set(Infinity)}
-//       {...props}
-//       className={cn(dockVariants({ className }), {
-//         "items-start": direction === "top",
-//         "items-center": direction === "middle",
-//         "items-end": direction === "bottom",
-//       })}>
-//       {renderChildren()}
-//     </motion.div>)
-//   );
-// });
-
-// Dock.displayName = "Dock";
-
-// const DockIcon = ({
-//   size,
-//   magnification = DEFAULT_MAGNIFICATION,
-//   distance = DEFAULT_DISTANCE,
-//   mouseX,
-//   className,
-//   children,
-//   ...props
-// }) => {
-//   const ref = useRef(null);
-
-//   const distanceCalc = useTransform(mouseX, (val) => {
-//     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
-//     return val - bounds.x - bounds.width / 2;
-//   });
-
-//   let widthSync = useTransform(distanceCalc, [-distance, 0, distance], [40, magnification, 40]);
-
-//   let width = useSpring(widthSync, {
-//     mass: 0.1,
-//     stiffness: 150,
-//     damping: 12,
-//   });
-
-//   return (
-//     (<motion.div
-//       ref={ref}
-//       style={{ width }}
-//       className={cn(
-//         "flex aspect-square cursor-pointer items-center justify-center rounded-full",
-//         className
-//       )}
-//       {...props}>
-//       {children}
-//     </motion.div>)
-//   );
-// };
-
-// DockIcon.displayName = "DockIcon";
-
-// export { Dock, DockIcon, dockVariants };
+export default Dock;
