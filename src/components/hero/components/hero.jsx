@@ -2,8 +2,8 @@
 
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-import mmd from "./hero.svg";
-import mahya from "./mahya.svg";
+import HeroImg from "./hero.svg";
+import Mahya from "./mahya.svg";
 import { useEffect } from "react";
 
 const HeroSection = () => {
@@ -39,8 +39,20 @@ const HeroSection = () => {
   }, [scrollY]);
 
   return (
-    <main className="relative h-screen w-full bg-gray-900 text-white overflow-hidden flex items-center justify-center">
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center">
+    <main className="relative h-screen w-full   text-white overflow-hidden flex items-center justify-center">
+      <div dir="rtl" className="absolute top-4 right-4 flex flex-col items-end">
+        <motion.div
+          className="  text-sm md:text-md"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <p>Contact Me</p>
+          <p className="mt-1 text-blue-400">example@email.com</p>
+        </motion.div>
+      </div>
+
+      <div className="relative flex flex-col md:flex-row items-center justify-center">
         <motion.div
           className="w-64 h-96 md:w-[30rem] md:h-[54rem] overflow-hidden mr-0 md:mr-8 mt-10 md:mt-20"
           initial={{ opacity: 0, x: -100 }}
@@ -49,8 +61,8 @@ const HeroSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="relative w-full h-full">
-            <Image src={mmd} alt="Person" objectFit="cover" />
-            {/* <Image src={mahya} alt="Person" objectFit="cover" /> */}
+            <Image src={HeroImg} alt="Person" objectFit="cover" />
+            {/* <Image src={Mahya} alt="Person" objectFit="cover" /> */}
           </div>
         </motion.div>
 
@@ -108,13 +120,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-30"
-        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-        style={{ backgroundSize: "200% 200%" }}
-      />
     </main>
   );
 };
