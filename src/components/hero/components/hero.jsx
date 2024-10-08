@@ -49,7 +49,8 @@ const HeroSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="relative w-full h-full">
-            <Image src={mahya} alt="Person" objectFit="cover" />
+            <Image src={mmd} alt="Person" objectFit="cover" />
+            {/* <Image src={mahya} alt="Person" objectFit="cover" /> */}
           </div>
         </motion.div>
 
