@@ -12,6 +12,7 @@ import Image from "next/image";
 import { RiProjectorFill } from "react-icons/ri";
 import { PiLinkedinLogoFill } from "react-icons/pi";
 import { RiInstagramFill } from "react-icons/ri";
+import { MdContactPhone } from "react-icons/md";
 const Dock = () => {
   const links = [
     {
@@ -21,22 +22,11 @@ const Dock = () => {
     },
 
     {
-      title: "Instagram",
-      icon: <RiInstagramFill className="h-full w-full text-white" />,
+      title: "Contact Me",
+      icon: <MdContactPhone className="h-full w-full text-white" />,
       href: "#",
     },
 
-    {
-      title: "LinkedIn",
-      icon: <PiLinkedinLogoFill className="h-full w-full text-white" />,
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: <IconBrandX className="h-full w-full text-white" />,
-      href: "#",
-    },
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-full w-full text-white" />,
