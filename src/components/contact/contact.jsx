@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Footer from "../footer";
+import Line from "../line";
+import { MdPermContactCalendar } from "react-icons/md";
 
 const Contact = () => {
   return (
     <>
+      <div className="overflow-x-hidden overflow-y-hidden">
+        <Line logo={<MdPermContactCalendar />} />
+      </div>
       <div className="container px-6 py-12 mx-auto ">
         <div className="p-8 rounded-2xl bg-pink-900 ">
           <h1 className="text-3xl md:text-5xl font-bold text-white dark:text-white mb-8 text-center">

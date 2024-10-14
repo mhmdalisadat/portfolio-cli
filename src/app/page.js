@@ -9,6 +9,7 @@ import LineWithCircleIcon from "@/components/line";
 import About from "@/modules/about/about";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact/contact";
+import Projects from "@/components/experinse/experinse";
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
       </div>
       <div className="mt-10">
         <Slider />
+      </div>
+      <div className="mt-10">
+        <Projects />
       </div>
       <div className="mt-10">
         <Contact />
