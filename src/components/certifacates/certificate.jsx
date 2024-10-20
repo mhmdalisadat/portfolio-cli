@@ -3,6 +3,7 @@
 import { motion, useAnimationFrame } from "framer-motion";
 import { useRef } from "react";
 import Line from "../line";
+import { PiCertificateFill } from "react-icons/pi";
 
 const cards = [
   { id: 1, title: "Beautiful Landscape", image: "/assets/jsm-logo.png" },
@@ -29,12 +30,18 @@ export default function Slider() {
 
   return (
     <>
-      <div className="flex items-center justify-center w-3/4 mx-auto overflow-x-hidden overflow-y-hidden p-8 bg-pink-900 rounded-2xl shadow-lg">
+      <div className="overflow-x-hidden overflow-y-hidden">
+        <Line logo={<PiCertificateFill />} />
+      </div>
+      <h1 className="mt-6 text-3xl md:text-5xl font-bold text-white dark:text-white mb-8 text-center overflow-x-hidden">
+        certificates
+      </h1>
+      <div className="flex items-center justify-center mx-auto overflow-x-hidden p-8  ">
         <div ref={containerRef} className="flex space-x-4">
           {[...cards, ...cards, ...cards].map((card, index) => (
             <motion.div
               key={index}
-              className="min-w-[300px] h-[300px] bg-blue-950 text-black flex flex-col items-center justify-start rounded-xl shadow-md overflow-hidden"
+              className="min-w-[300px] h-[300px] bg-pink-900 text-black flex flex-col items-center justify-start rounded-xl shadow-md overflow-hidden"
               whileHover={{
                 y: -10,
                 boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
