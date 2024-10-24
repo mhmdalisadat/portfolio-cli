@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,7 +9,7 @@ const HeroSection = () => {
     <>
       <main className="relative h-screen w-full text-white overflow-hidden rounded-2xl flex items-center justify-center">
         <motion.div
-          className="absolute inset-0 bg-black"
+          className="absolute inset-0 bg-[#555]"
           animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
           transition={{ duration: 20, ease: "linear", repeat: Infinity }}
           style={{ backgroundSize: "200% 200%" }}

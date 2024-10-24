@@ -56,7 +56,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="container mx-auto my-20 p-5 bg-gray-800 rounded-2xl shadow-lg">
+    <section className="container mx-auto my-20 p-5 bg-[#555] rounded-2xl shadow-lg">
       <p className="text-4xl font-bold text-center text-white mb-10">
         Selected Works
       </p>
