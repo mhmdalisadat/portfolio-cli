@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import Contact from "@/components/contact/contact";
 import Projects from "@/components/experinse/experinse";
 import TeamBanner from "@/components/teamSec/teamBanner";
+import PartnerShip from "@/components/partnerShips";
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
       <div className="mt-10">
         <Projects />
       </div>
-
+      <div>
+        <PartnerShip />
+      </div>
       <div className="bg-black">
         <About />
       </div>
