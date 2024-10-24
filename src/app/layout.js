@@ -2,19 +2,24 @@ import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 
-// Importing Roboto from Google Fonts
 const roboto = Roboto({
-  weight: ["400", "700"], // Include multiple weights if needed
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
-// Josefin Sans font via Google Fonts
-import { Josefin_Sans } from "@next/font/google"; // Use the official `@next/font/google` for optimization
+import { Josefin_Sans } from "next/font/google";
 
 const josefinSans = Josefin_Sans({
-  weight: ["100", "300", "400", "700"], // Include the variable weights
+  weight: ["100", "300", "400", "700"],
   subsets: ["latin"],
-  style: ["normal", "italic"], // Include styles if necessary
+  style: ["normal", "italic"],
+});
+
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
+
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  weight: ["400", "700"],
+  subsets: ["arabic"],
 });
 
 export const metadata = {
@@ -26,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} ${josefinSans.className} antialiased`}
+        className={`${roboto.className} ${josefinSans.className} ${ibmPlexSansArabic.className} antialiased`}
       >
         {children}
       </body>

@@ -69,7 +69,7 @@ const About = () => {
             >
               <div
                 className={`p-5 rounded-2xl shadow-lg ${
-                  index > 0 ? "bg-pink-900" : "bg-pink-900"
+                  index > 0 ? "bg-[#555]" : "bg-[#555]"
                 }`}
               >
                 {index < 5 && (
@@ -132,7 +132,7 @@ const About = () => {
                       </p>
                       <p className="text-white">
                         I love solving problems and building things through
-                        code. Programming isn't just my profession—it's my
+                        code. Programming just my s my
                         passion. I enjoy exploring new technologies, and
                         enhancing my skills.
                       </p>

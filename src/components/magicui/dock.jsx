@@ -17,24 +17,24 @@ const Dock = () => {
   const links = [
     {
       title: "Home",
-      icon: <IconHome className="h-full w-full text-white" />,
+      icon: <IconHome className="h-full w-full text-black font-bold" />,
       href: "#",
     },
 
     {
       title: "Contact Me",
-      icon: <MdContactPhone className="h-full w-full text-white" />,
+      icon: <MdContactPhone className="h-full w-full text-black font-bold" />,
       href: "#",
     },
 
     {
       title: "GitHub",
-      icon: <IconBrandGithub className="h-full w-full text-white" />,
+      icon: <IconBrandGithub className="h-full w-full text-black font-bold" />,
       href: "#",
     },
     {
       title: "Projects",
-      icon: <RiProjectorFill className="h-full w-full text-white" />,
+      icon: <RiProjectorFill className="h-full w-full text-black font-bold" />,
       href: "#",
     },
   ];

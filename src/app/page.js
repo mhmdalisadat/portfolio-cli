@@ -10,25 +10,27 @@ import About from "@/modules/about/about";
 import Footer from "@/components/footer";
 import Contact from "@/components/contact/contact";
 import Projects from "@/components/experinse/experinse";
+import TeamBanner from "@/components/teamSec/teamBanner";
 
 export default function Home() {
   return (
-    <div className="relative bg-blue-950 min-h-screen flex flex-col ">
+    <div className="relative bg-black min-h-screen flex flex-col ">
       <div className="flex-grow flex justify-center items-center">
         <div className="mt-8 rounded-2xl max-w-9xl w-full mx-4 shadow-xl">
           <HeroSection />
         </div>
       </div>
-
-      <div className="bg-blue-950">
-        <About />
-      </div>
-      <div className="mt-10">
-        <Slider />
+      <div className="bg-black">
+        <TeamBanner />
       </div>
       <div className="mt-10">
         <Projects />
       </div>
+
+      <div className="bg-black">
+        <About />
+      </div>
+
       <div className="mt-10">
         <Contact />
       </div>

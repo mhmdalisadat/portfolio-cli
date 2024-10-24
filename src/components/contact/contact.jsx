@@ -7,20 +7,22 @@ import { MdPermContactCalendar } from "react-icons/md";
 const Contact = () => {
   return (
     <>
-      <div className="overflow-x-hidden overflow-y-hidden">
+      <div className="overflow-x-hidden overflow-y-hidden bg-gradient-to-b ">
         <Line logo={<MdPermContactCalendar />} />
       </div>
+
       <div className="container px-6 py-12 mx-auto ">
-        <div className="p-8 rounded-2xl bg-pink-900 ">
-          <h1 className="text-3xl md:text-5xl font-bold text-white dark:text-white mb-8 text-center">
+        <div className="p-8 rounded-2xl bg-[#252525] shadow-lg">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-8 text-center">
             Contact Me
           </h1>
+
           <div className="flex items-center justify-center">
             <motion.div
-              className="p-4 py-6 rounded-2xl bg-blue-950  md:p-8"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              className="p-4 py-6 rounded-2xl bg-[#333] shadow-inner md:p-8"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
             >
               <form>
                 <div className="-mx-2 md:items-center md:flex">
@@ -30,7 +32,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      className="block w-full px-5 py-2.5 mt-2 text-white  bg-pink-900   rounded-xl    focus:border-white dark:focus:border-blue-400 focus:ring-white focus:outline-none focus:ring "
+                      className="block w-full px-5 py-2.5 mt-2 text-white bg-[#555] rounded-xl focus:ring-gold focus:outline-none"
                     />
                   </div>
 
@@ -40,7 +42,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      className="block w-full px-5 py-2.5 mt-2 text-white  bg-pink-900   rounded-xl    focus:border-white dark:focus:border-blue-400 focus:ring-white focus:outline-none focus:ring "
+                      className="block w-full px-5 py-2.5 mt-2 text-white bg-[#555] rounded-xl focus:ring-gold focus:outline-none"
                     />
                   </div>
                 </div>
@@ -50,8 +52,8 @@ const Contact = () => {
                     Email address
                   </label>
                   <input
-                    type="text"
-                    className="block w-full px-5 py-2.5 mt-2 text-white  bg-pink-900   rounded-xl    focus:border-white dark:focus:border-blue-400 focus:ring-white focus:outline-none focus:ring "
+                    type="email"
+                    className="block w-full px-5 py-2.5 mt-2 text-white bg-[#555] rounded-xl focus:ring-gold focus:outline-none"
                   />
                 </div>
 
@@ -59,15 +61,21 @@ const Contact = () => {
                   <label className="block mb-2 text-sm text-white">
                     Message
                   </label>
-                  <textarea className="block w-full px-5 py-2.5 mt-2 text-white  bg-pink-900   rounded-xl    focus:border-white dark:focus:border-blue-400 focus:ring-white focus:outline-none focus:ring "></textarea>
+                  <textarea className="block w-full px-5 py-2.5 mt-2 text-white bg-[#555] rounded-xl focus:ring-gold focus:outline-none"></textarea>
                 </div>
 
-                <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-pink-900  hover:bg-white hover:text-blue-950 focus:outline-none focus:ring focus:ring-pink-950 rounded-xl ">
+                <motion.button
+                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-black bg-[#B8860B] hover:bg-white hover:text-black focus:outline-none focus:ring focus:ring-white rounded-xl"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   Send message
-                </button>
+                </motion.button>
               </form>
             </motion.div>
           </div>
+
+
 
           <Footer />
         </div>
